@@ -1,0 +1,66 @@
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-box {
+    /*game box styling*/
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 2px;
+
+    /**/
+    font-size: 100px;
+    text-align: center;
+}
+
+.game-container {
+    width: 320px;
+    margin-top: 10px;
+}
+
+#mpBtn {
+    margin-left: 10px;
+}
+
+.game-type-container {
+    margin-top: 10px;
+}
+
+#cpu-starter {
+    margin-left: 10px;
+}
+
+#winner-div {
+    text-align: center;
+    width: 309px;
+    height: 303px;
+    margin: auto;
+    margin-top: 10px;
+    position: absolute;
+    top: 151px;
+    z-index: 1;
+}
+
+.main-container {          
+    width: 320px;
+    margin-top: 10px;
+    position: absolute;
+}
+
+#winner-text {
+    margin-top: 150px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#winner-reset {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#player-two {
+    margin-left: 10px;
+}
