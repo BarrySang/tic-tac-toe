@@ -208,6 +208,15 @@ function resetGame() {
 // function remove winner display
 function removeWinnerDisplay() {
     const winnerDisplayer =  document.getElementById('winner-div');
+    const winnerText = document.getElementById('winner-text');
+
+    // reset winner text
+    winnerText.innerText = "";
+    
+    //remove child elements of winner display
+    removeChildElements(winnerDisplayer);
+    
+    // remove winner display
     winnerDiv.remove();
 
     // change the opacity value of boxes to the default
@@ -216,12 +225,16 @@ function removeWinnerDisplay() {
     });
 };
 
-// remove game options and process(turn for player) display
-function removeGameOptions() {
-    let childNodes = Array.prototype.slice.call(gameTypeContainer.childNodes);    
-    childNodes.forEach(node => {
+// function to remove child elements
+function removeChildElements(element) {
+    (Array.prototype.slice.call(element.childNodes)).forEach(node => {
         node.remove();
     });
+}
+
+// remove game options and process(turn for player) display
+function removeGameOptions() {
+    removeChildElements(gameTypeContainer);
 }
 
 
