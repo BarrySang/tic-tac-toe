@@ -208,6 +208,11 @@ function resetGame() {
 // function remove winner display
 function removeWinnerDisplay() {
     const winnerDisplayer =  document.getElementById('winner-div');
+
+    //remove child elements of winner display
+    removeChildElements(winnerDisplayer);
+
+    // remove winner display
     winnerDiv.remove();
 
     // change the opacity value of boxes to the default
@@ -216,9 +221,16 @@ function removeWinnerDisplay() {
     });
 };
 
+// function to remove child elements
+function removeChildElements(element) {
+    (Array.prototype.slice.call(gameTypeContainer.childNodes)).forEach(node => {
+        node.remove();
+    });
+}
+
 // remove game options and process(turn for player) display
 function removeGameOptions() {
-    let childNodes = Array.prototype.slice.call(gameTypeContainer.childNodes);    
+    let childNodes = Array.prototype.slice.call(gameTypeContainer.childNodes);
     childNodes.forEach(node => {
         node.remove();
     });
